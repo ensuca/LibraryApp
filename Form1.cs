@@ -73,5 +73,10 @@ namespace LibraryApp
             lblUsername.Text = "Yönetici Adı:";
             btnLogin.Text = "Yönetici Girişi";
         }
+
+        private void lblUsername_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

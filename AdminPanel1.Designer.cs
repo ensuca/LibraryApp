@@ -1,24 +1,15 @@
-﻿
-namespace LibraryApp
+﻿namespace LibraryApp
 {
     partial class AdminPanel
     {
-        private System.ComponentModel.IContainer components = null;
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Button btnDeleteUser;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Label lblUsername;
 
         private void InitializeComponent()
         {
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnLogin = new System.Windows.Forms.Button();
+            // Diğer bileşenlerin tanımlamaları
 
             // txtUsername
             this.txtUsername.Location = new System.Drawing.Point(100, 50);
@@ -26,34 +17,33 @@ namespace LibraryApp
             this.txtUsername.Size = new System.Drawing.Size(200, 20);
             this.txtUsername.TabIndex = 0;
 
-            // txtPassword
-            this.txtPassword.Location = new System.Drawing.Point(100, 100);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(200, 20);
-            this.txtPassword.TabIndex = 1;
+            // btnDeleteUser
+            this.btnDeleteUser.Location = new System.Drawing.Point(150, 100);
+            this.btnDeleteUser.Name = "btnDeleteUser";
+            this.btnDeleteUser.Size = new System.Drawing.Size(100, 30);
+            this.btnDeleteUser.TabIndex = 1;
+            this.btnDeleteUser.Text = "Kullanıcı Sil";
+            this.btnDeleteUser.UseVisualStyleBackColor = true;
+            this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
 
-            // btnLogin
-            this.btnLogin.Location = new System.Drawing.Point(150, 150);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(100, 30);
-            this.btnLogin.TabIndex = 2;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // btnLogout
+            this.btnLogout.Location = new System.Drawing.Point(340, 300);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(100, 30);
+            this.btnLogout.TabIndex = 2;
+            this.btnLogout.Text = "Çıkış";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
 
-            // adminPanel1
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 200);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtUsername);
-            this.Name = "adminPanel1";
-            this.Text = "Admin Login";
+            // lblUsername
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Location = new System.Drawing.Point(20, 50);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(75, 13);
+            this.lblUsername.TabIndex = 3;
+            this.lblUsername.Text = "Kullanıcı Adı:";
+
+            // Form özellikleri ve düzenlemeleri
         }
-
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Button btnLogin;
     }
 }

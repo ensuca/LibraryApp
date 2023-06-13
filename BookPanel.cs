@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace LibraryApp
 {
     public partial class BookPanel : Form
@@ -70,7 +69,7 @@ namespace LibraryApp
             // Çıkış yap ve giriş ekranını göster
             Form1 loginForm = new Form1();
             loginForm.Show();
-            Close();
+            this.Close();
         }
     }
 }

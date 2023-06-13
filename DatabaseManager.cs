@@ -11,7 +11,7 @@ namespace LibraryApp
 
         public DatabaseManager()
         {
-            connection = new SQLiteConnection("Data Source=library.db;Version=3;");
+            connection = new SQLiteConnection("Data Source=veritabani.db;Version=3;");
             command = new SQLiteCommand(connection);
         }
 

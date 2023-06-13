@@ -1,68 +1,83 @@
-﻿
-namespace LibraryApp
+﻿namespace LibraryApp
 {
     partial class BookPanel
     {
-        private System.ComponentModel.IContainer components = null;
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        private System.Windows.Forms.Button btnBorrow;
+        private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.DataGridView dgvBooks;
+        private System.Windows.Forms.TextBox txtBookId;
+        private System.Windows.Forms.TextBox txtUserId;
+        private System.Windows.Forms.Label lblBookId;
+        private System.Windows.Forms.Label lblUserId;
+        private System.Windows.Forms.Button btnLogout;
 
         private void InitializeComponent()
         {
-            this.txtTitle = new System.Windows.Forms.TextBox();
-            this.txtAuthor = new System.Windows.Forms.TextBox();
-            this.txtISBN = new System.Windows.Forms.TextBox();
-            this.btnAddBook = new System.Windows.Forms.Button();
+            // Diğer bileşenlerin tanımlamaları
 
-            // txtTitle
-            this.txtTitle.Location = new System.Drawing.Point(100, 50);
-            this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(200, 20);
-            this.txtTitle.TabIndex = 0;
+            // btnBorrow
+            this.btnBorrow.Location = new System.Drawing.Point(340, 200);
+            this.btnBorrow.Name = "btnBorrow";
+            this.btnBorrow.Size = new System.Drawing.Size(100, 30);
+            this.btnBorrow.TabIndex = 6;
+            this.btnBorrow.Text = "Ödünç Al";
+            this.btnBorrow.UseVisualStyleBackColor = true;
+            this.btnBorrow.Click += new System.EventHandler(this.btnBorrow_Click);
 
-            // txtAuthor
-            this.txtAuthor.Location = new System.Drawing.Point(100, 100);
-            this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(200, 20);
-            this.txtAuthor.TabIndex = 1;
+            // btnReturn
+            this.btnReturn.Location = new System.Drawing.Point(340, 250);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(100, 30);
+            this.btnReturn.TabIndex = 7;
+            this.btnReturn.Text = "İade Et";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
 
-            // txtISBN
-            this.txtISBN.Location = new System.Drawing.Point(100, 150);
-            this.txtISBN.Name = "txtISBN";
-            this.txtISBN.Size = new System.Drawing.Size(200, 20);
-            this.txtISBN.TabIndex = 2;
+            // dgvBooks
+            this.dgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBooks.Location = new System.Drawing.Point(20, 20);
+            this.dgvBooks.Name = "dgvBooks";
+            this.dgvBooks.Size = new System.Drawing.Size(420, 150);
+            this.dgvBooks.TabIndex = 0;
 
-            // btnAddBook
-            this.btnAddBook.Location = new System.Drawing.Point(150, 200);
-            this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.Size = new System.Drawing.Size(100, 30);
-            this.btnAddBook.TabIndex = 3;
-            this.btnAddBook.Text = "Add Book";
-            this.btnAddBook.UseVisualStyleBackColor = true;
-            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
+            // txtBookId
+            this.txtBookId.Location = new System.Drawing.Point(100, 250);
+            this.txtBookId.Name = "txtBookId";
+            this.txtBookId.Size = new System.Drawing.Size(200, 20);
+            this.txtBookId.TabIndex = 4;
 
-            // BookPanel
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 250);
-            this.Controls.Add(this.btnAddBook);
-            this.Controls.Add(this.txtISBN);
-            this.Controls.Add(this.txtAuthor);
-            this.Controls.Add(this.txtTitle);
-            this.Name = "BookPanel";
-            this.Text = "Book Panel";
+            // txtUserId
+            this.txtUserId.Location = new System.Drawing.Point(100, 300);
+            this.txtUserId.Name = "txtUserId";
+            this.txtUserId.Size = new System.Drawing.Size(200, 20);
+            this.txtUserId.TabIndex = 5;
+
+            // lblBookId
+            this.lblBookId.AutoSize = true;
+            this.lblBookId.Location = new System.Drawing.Point(20, 250);
+            this.lblBookId.Name = "lblBookId";
+            this.lblBookId.Size = new System.Drawing.Size(58, 13);
+            this.lblBookId.TabIndex = 2;
+            this.lblBookId.Text = "Kitap ID:";
+
+            // lblUserId
+            this.lblUserId.AutoSize = true;
+            this.lblUserId.Location = new System.Drawing.Point(20, 300);
+            this.lblUserId.Name = "lblUserId";
+            this.lblUserId.Size = new System.Drawing.Size(54, 13);
+            this.lblUserId.TabIndex = 3;
+            this.lblUserId.Text = "Kullanıcı ID:";
+
+            // btnLogout
+            this.btnLogout.Location = new System.Drawing.Point(340, 300);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(100, 30);
+            this.btnLogout.TabIndex = 8;
+            this.btnLogout.Text = "Çıkış";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+
+            // Form özellikleri ve düzenlemeleri
         }
-
-        private System.Windows.Forms.TextBox txtTitle;
-        private System.Windows.Forms.TextBox txtAuthor;
-        private System.Windows.Forms.TextBox txtISBN;
-        private System.Windows.Forms.Button btnAddBook;
     }
 }
